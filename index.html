@@ -6,10 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calc</title>
     <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            width: 40vw;
+            height: 40vh;
+            padding: 20px 0 0 20px;
+        }
+
         label {
             display: block;
             font-size: 30px;
-            margin-top: 25px;
+
         }
         label[for='USD'] {
             color: blue;
@@ -17,6 +27,7 @@
 
         label[for='UAH'] {
             color: #e6e600;
+            margin-top: 25px;
         }
 
         input {
@@ -27,11 +38,12 @@
     </style>
 </head>
 <body>
-    
+    <div>
     <label for="USD">USD</label>
     <input id="USD" type="text">
     <label for="UAH">UAH</label>
     <input id="UAH" type="text">
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

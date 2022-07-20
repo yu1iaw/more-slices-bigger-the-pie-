@@ -1,7 +1,8 @@
 'use strict';
 
 const inputUAH = document.querySelector('#UAH'),
-      inputUSD = document.querySelector('#USD');
+      inputUSD = document.querySelector('#USD'),
+      wrapper = document.querySelector('div');
 
 inputUSD.addEventListener('input', () => {
     const request = new XMLHttpRequest();
@@ -17,8 +18,10 @@ inputUSD.addEventListener('input', () => {
         } else {
             inputUAH.value = 'Йой!';
         }
+        
     });
 });
+
 
 inputUAH.addEventListener('input', () => {
     const request = new XMLHttpRequest();
@@ -34,5 +37,14 @@ inputUAH.addEventListener('input', () => {
         } else {
             inputUSD.value = 'Oops!';
         }
+        
     });
 });
+
+wrapper.addEventListener('mouseleave', clearInputs);
+
+
+function clearInputs() {
+    inputUSD.value = '';
+    inputUAH.value = '';
+}
